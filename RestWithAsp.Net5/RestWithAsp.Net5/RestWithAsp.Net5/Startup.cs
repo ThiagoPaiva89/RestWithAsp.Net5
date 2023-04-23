@@ -8,12 +8,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RestWithAsp.Net5.Model.Context;
-using RestWithAsp.Net5.Services;
-using RestWithAsp.Net5.Services.Implementations;
+using RestWithAsp.Net5.Business;
+using RestWithAsp.Net5.Business.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RestWithAsp.Net5.Repository;
+using RestWithAsp.Net5.Repository.Implementations;
 
 namespace RestWithAsp.Net5
 {
@@ -36,7 +38,8 @@ namespace RestWithAsp.Net5
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
 
             //Dependency Injection
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
             //Versioning API
             services.AddApiVersioning();
