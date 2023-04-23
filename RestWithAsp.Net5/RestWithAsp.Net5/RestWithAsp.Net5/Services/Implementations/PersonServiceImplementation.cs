@@ -19,7 +19,6 @@ namespace RestWithAsp.Net5.Services.Implementations
 
         public List<Person> FindAll()
         {
-
             return _context.Persons.ToList();
         }
 
@@ -37,7 +36,6 @@ namespace RestWithAsp.Net5.Services.Implementations
             }
             catch (Exception)
             {
-
                 throw;
             }
             return person;
@@ -58,7 +56,6 @@ namespace RestWithAsp.Net5.Services.Implementations
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
             }
