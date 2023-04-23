@@ -21,3 +21,13 @@ C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\R
 C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\obj\Debug\net5.0\ref\RestWithAsp.Net5.dll
 C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\obj\Debug\net5.0\RestWithAsp.Net5.pdb
 C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\obj\Debug\net5.0\RestWithAsp.Net5.genruntimeconfig.cache
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\MySqlConnector.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Pomelo.JsonObject.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\obj\Debug\net5.0\RestWithAsp.Net5.csproj.CopyComplete
