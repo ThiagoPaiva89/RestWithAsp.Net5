@@ -1,76 +1,79 @@
-﻿using RestWithAsp.Net5.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using RestWithAsp.Net5.Model.Base;
 using RestWithAsp.Net5.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
-namespace RestWithAsp.Net5.Repository.Implementations
+namespace RestWithAsp.Net5.Repository.Generic
 {
-    public class BookRepositoryImplementation : IBookRepository
+    public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
 
         private MySQLContext _context;
 
-        public BookRepositoryImplementation(MySQLContext context)
+        private DbSet<T> dataset;
+
+        public GenericRepository(MySQLContext context)
         {
             _context = context;
+            dataset = _context.Set<T>();
         }
 
-        public List<Book> FindAll()
+        public List<T> FindAll()
         {
-            return _context.Books.ToList();
+            return dataset.ToList();
         }
 
-        public Book FindById(long id)
+        public T FindById(long id)
         {
-            return _context.Books.SingleOrDefault(p => p.Id.Equals(id));
+            return dataset.SingleOrDefault(p => p.Id.Equals(id));
         }
 
-        public Book Create(Book book)
+        public T Create(T item)
         {
             try
             {
-                _context.Add(book);
+                dataset.Add(item);
                 _context.SaveChanges();
+                return item;
             }
             catch (Exception)
             {
                 throw;
             }
-            return book;
         }
 
-        public Book Update(Book book)
+        public T Update(T item)
         {
-            if (!Exists(book.Id)) return null;
-
-            var result = _context.Books.SingleOrDefault(p => p.Id.Equals(book.Id));
-
+            var result = dataset.SingleOrDefault(p => p.Id.Equals(item.Id));
             if (result != null)
             {
                 try
                 {
-                    _context.Entry(result).CurrentValues.SetValues(book);
+                    _context.Entry(result).CurrentValues.SetValues(item);
                     _context.SaveChanges();
+                    return result;
                 }
                 catch (Exception)
                 {
                     throw;
                 }
             }
-
-            return book;
+            else
+            {
+                return null;
+            }
         }
 
         public void Delete(long id)
         {
-            var result = _context.Books.SingleOrDefault(b => b.Id.Equals(id));
+            var result = dataset.SingleOrDefault(p => p.Id.Equals(id));
             if (result != null)
             {
                 try
                 {
-                    _context.Books.Remove(result);
+                    dataset.Remove(result);
                     _context.SaveChanges();
                 }
                 catch (Exception)
@@ -82,7 +85,7 @@ namespace RestWithAsp.Net5.Repository.Implementations
 
         public bool Exists(long id)
         {
-            return _context.Books.Any(p => p.Id.Equals(id));
+            return dataset.Any(p => p.Id.Equals(id));
         }
     }
 }
