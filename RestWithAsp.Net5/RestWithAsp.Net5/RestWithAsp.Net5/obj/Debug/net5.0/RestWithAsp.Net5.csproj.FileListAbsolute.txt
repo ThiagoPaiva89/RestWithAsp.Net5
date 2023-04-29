@@ -44,3 +44,4 @@ C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\R
 C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Serilog.Sinks.Console.dll
 C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
 C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Thiago\Curso-RestAspNet5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\RestWithAsp.Net5\obj\Debug\net5.0\RestWithAsp.Net5.csproj.AssemblyReference.cache
