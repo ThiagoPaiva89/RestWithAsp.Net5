@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using RestWithAsp.Net5.Repository;
 using Serilog;
 using RestWithAsp.Net5.Repository.Generic;
+using Microsoft.Net.Http.Headers;
 
 namespace RestWithAsp.Net5
 {
@@ -47,6 +48,15 @@ namespace RestWithAsp.Net5
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+
+            services.AddMvc(options =>
+            {
+                options.RespectBrowserAcceptHeader = true;
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/xml"));
+            }).AddXmlSerializerFormatters();
+
+
 
             //Versioning API
             services.AddApiVersioning();
