@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I411+hs3EnjiLX+pElYXFN2/+vuywNIxOcQh2bO6dpj4pTkjWytjEALFBw+/Z3dfsmSqNOGuvSHzP/Xk9fn+OA==",
+  "dgSpecHash": "2pDEs6Czs9ySaM43fHN5w7bJicLmH1dNss9STbQAaA+6b3W1Dgz18ZsrIjpJfdWbchID2xDx7wGM7DUCAnbD8w==",
   "success": true,
   "projectFilePath": "C:\\Thiago\\Curso-RestAspNet5\\RestWithAsp.Net5\\RestWithAsp.Net5\\RestWithAsp.Net5\\RestWithAsp.Net5\\RestWithAsp.Net5\\RestWithAsp.Net5.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,7 @@
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.mvc.formatters.xml\\2.2.0\\microsoft.aspnetcore.mvc.formatters.xml.2.2.0.nupkg.sha512",
-    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\4.1.1\\microsoft.aspnetcore.mvc.versioning.4.1.1.nupkg.sha512",
+    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.responsecaching.abstractions\\2.2.0\\microsoft.aspnetcore.responsecaching.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.2.0\\microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.routing.abstractions\\2.2.0\\microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512",

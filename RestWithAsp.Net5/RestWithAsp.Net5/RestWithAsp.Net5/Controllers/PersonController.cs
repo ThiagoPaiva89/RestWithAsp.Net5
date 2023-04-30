@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using RestWithAsp.Net5.Model;
 using RestWithAsp.Net5.Business;
 using RestWithAsp.Net5.Data.VO;
+using RestWithAsp.Net5.Hypermedia.Filters;
 
 namespace RestWithAsp.Net5.Controllers
 {
@@ -22,12 +23,14 @@ namespace RestWithAsp.Net5.Controllers
         }
 
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_personBusiness.FindAll());
         }
 
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var person = _personBusiness.FindById(id);
@@ -37,6 +40,7 @@ namespace RestWithAsp.Net5.Controllers
         }      
         
         [HttpPost]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] PersonVO person)
         {
             if (person == null)
@@ -45,6 +49,7 @@ namespace RestWithAsp.Net5.Controllers
         }    
         
         [HttpPut]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] PersonVO person)
         {
             if (person == null)
