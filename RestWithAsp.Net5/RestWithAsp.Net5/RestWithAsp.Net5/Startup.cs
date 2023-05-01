@@ -15,11 +15,14 @@ using RestWithAsp.Net5.Repository.Generic;
 using Microsoft.Net.Http.Headers;
 using RestWithAsp.Net5.Hypermedia.Filters;
 using RestWithAsp.Net5.Hypermedia.Enricher;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace RestWithAsp.Net5
 {
     public class Startup
     {
+
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment Environment { get; }
 
@@ -46,6 +49,7 @@ namespace RestWithAsp.Net5
                 MigrateDatabase(connection);
             }
 
+            
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
@@ -67,6 +71,19 @@ namespace RestWithAsp.Net5
             //Versioning API
             services.AddApiVersioning();
 
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo {
+                        Title = "Rest API's From 0 To Azure with ASP.NET Core 5 and Docker",
+                        Version = "v1",
+                        Description = "Rest API's From 0 To Azure with ASP.NET Core 5 and Docker",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Thiago Paiva",
+                            Url = new Uri("https://github.com/ThiagoPaiva89")
+                        }
+                    });
+            });
 
         }
 
@@ -83,6 +100,18 @@ namespace RestWithAsp.Net5
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                                  "Rest API's From 0 To Azure with ASP.NET Core 5 and Docker - v1");
+            });
+
+            var option = new RewriteOptions();
+            option.AddRedirect("^$","swagger");
+
+            app.UseRewriter(option);
 
             app.UseAuthorization();
 
