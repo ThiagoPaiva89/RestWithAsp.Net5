@@ -22,7 +22,6 @@ namespace RestWithAsp.Net5
 {
     public class Startup
     {
-
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment Environment { get; }
 
@@ -38,6 +37,10 @@ namespace RestWithAsp.Net5
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors(options => options.AddDefaultPolicy(builder =>
+            {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            }));
 
             services.AddControllers();
 
@@ -87,8 +90,6 @@ namespace RestWithAsp.Net5
 
         }
 
-      
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -100,6 +101,8 @@ namespace RestWithAsp.Net5
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseSwagger();
 
